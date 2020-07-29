@@ -1,0 +1,6 @@
+framework module Pods_rubi {
+  umbrella header "Pods-rubi-umbrella.h"
+
+  export *
+  module * { export * }
+}
