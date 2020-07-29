@@ -6,6 +6,8 @@ target 'rubi' do
   use_frameworks!
   pod 'Alamofire'
   pod 'JGProgressHUD'
-
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'RxBlocking'
   # Pods for rubi
 end
