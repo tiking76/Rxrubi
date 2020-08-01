@@ -6,6 +6,9 @@ PODS:
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
+  - RxKeyboard (1.0.0):
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
   - RxRelay (5.1.1):
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
@@ -15,6 +18,7 @@ DEPENDENCIES:
   - JGProgressHUD
   - RxBlocking
   - RxCocoa
+  - RxKeyboard
   - RxSwift
 
 SPEC REPOS:
@@ -23,6 +27,7 @@ SPEC REPOS:
     - JGProgressHUD
     - RxBlocking
     - RxCocoa
+    - RxKeyboard
     - RxRelay
     - RxSwift
 
@@ -31,9 +36,10 @@ SPEC CHECKSUMS:
   JGProgressHUD: aa403e9a5b45cae98903c4600cccdd98c0c3ec90
   RxBlocking: 5f700a78cad61ce253ebd37c9a39b5ccc76477b4
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxKeyboard: 6683c4344304a00f943c158bd8a43ce5469c82a7
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
 
-PODFILE CHECKSUM: fa08644264335cd37f4172a5346ca9d470b79937
+PODFILE CHECKSUM: e0d0ff5acb24f414c7c970c19fa948e9c7ebc2a6
 
 COCOAPODS: 1.9.3

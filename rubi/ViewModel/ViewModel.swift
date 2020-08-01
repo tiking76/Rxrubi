@@ -12,7 +12,7 @@ protocol  AuthenticationProtocol {
     var formIsVaild: Bool { get }
 }
 
-struct mainviewModel : AuthenticationProtocol {
+struct MainViewModel : AuthenticationProtocol {
     var text : String?
     var formIsVaild : Bool {
         return text?.isEmpty == false
