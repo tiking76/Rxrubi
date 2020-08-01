@@ -25,7 +25,7 @@ import UIKit
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 0
         label.font = self.font
-        label.textColor = UIColor(red: 0.0, green: 0.0, blue: 0.0980392, alpha: 0.22)
+        label.textColor = UIColor(named: "Color")
         label.backgroundColor = .clear
         self.addSubview(label)
         return label

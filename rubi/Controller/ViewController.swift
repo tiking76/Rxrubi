@@ -64,12 +64,15 @@ class ViewController: UIViewController {
                                     width: 300,
                                     height: 100)
         goNextButton.layer.cornerRadius = 10.0
+        goNextButton.layer.shadowOffset = CGSize(width: 3, height: 3 )
+        goNextButton.layer.shadowOpacity = 0.5
+        goNextButton.layer.shadowRadius = 10
         goNextButton.isEnabled = false
-        
     }
     func configTextField() {
         view.addSubview(inputTextView)
         inputTextView.placeHolder = "ここに変換したい漢字をいれてね"
+        
     }
     //UITextVieの範囲外をタップしたら閉じる
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
