@@ -24,20 +24,23 @@ class ResultViewController: UIViewController {
         inputtedTextField.text = context
         resultTextField.text = resText
     }
+    
     @objc func backHome() {
         dismiss(animated: true, completion: nil)
         inputtedTextField.text = ""
         resultTextField.text = ""
     }
+    
     func configUI() {
         configButton()
         configTextField()
         view.addSubview(arrowLabel)
     }
+    
     func configButton() {
         view.addSubview(backHomeButton)
-        backHomeButton.backgroundColor = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
-        backHomeButton.tintColor = .white
+        backHomeButton.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        backHomeButton.tintColor = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
         backHomeButton.setTitle("Home", for: .normal)
         backHomeButton.addTarget(self, action: #selector(backHome), for: .touchUpInside)
         backHomeButton.frame = CGRect(x: (self.view.frame.size.width / 2) - 150,
@@ -46,8 +49,11 @@ class ResultViewController: UIViewController {
                                       height: 100)
         backHomeButton.layer.cornerRadius = 10.0
     }
+    
     func configTextField() {
         view.addSubview(inputtedTextField)
         view.addSubview(resultTextField)
+        inputtedTextField.backgroundColor = UIColor(named: "BackgroundColor")
+        resultTextField.backgroundColor = UIColor(named: "BackgroundColor")
     }
 }

@@ -30,7 +30,7 @@ import UIKit
         self.addSubview(label)
         return label
     }()
-
+    
     // MARK: Initializers
 
     deinit {

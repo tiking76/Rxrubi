@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     
     private var text : String?
     private let api = APIClient()
+
     
     @IBOutlet weak var inputTextView: PlaceHolderTextView!
     
@@ -32,6 +33,7 @@ class ViewController: UIViewController {
         configureGradientLayer()
         configButton()
         configTextField()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,6 +43,7 @@ class ViewController: UIViewController {
     @IBAction func goNext(_ sender: Any) {
         let storyboard: UIStoryboard = self.storyboard!
         let nextView = storyboard.instantiateViewController(withIdentifier: "resultView") as? ResultViewController
+        nextView?.modalPresentationStyle = .fullScreen
         showLoader(true)
         text = inputTextView.text!
         nextView?.context = text ?? ""
@@ -51,13 +54,14 @@ class ViewController: UIViewController {
                 self.showLoader(false)
                 self.present(nextView!, animated: true)
                 self.inputTextView.text = nil
-                self.viewDidLoad()
             }
         }
     }
+    
     func configButton() {
         view.addSubview(goNextButton)
         goNextButton.backgroundColor = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
+        goNextButton.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
         goNextButton.setTitle("変換!", for: .normal)
         goNextButton.frame = CGRect(x: (self.view.frame.size.width / 2) - 150,
                                     y: (self.view.frame.size.height / 2) - 50,
@@ -69,15 +73,19 @@ class ViewController: UIViewController {
         goNextButton.layer.shadowRadius = 10
         goNextButton.isEnabled = false
     }
+    
     func configTextField() {
         view.addSubview(inputTextView)
+        inputTextView.backgroundColor = UIColor(named: "BackgroundColor")
         inputTextView.placeHolder = "ここに変換したい漢字をいれてね"
         
     }
+    
     //UITextVieの範囲外をタップしたら閉じる
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
+    
     @objc func handleisPush() {
         textDidChange(sender: inputTextView)
     }
@@ -95,12 +103,15 @@ extension ViewController : AuthenticationControllerProtocol {
     func checkFormStatus() {
         if viewModel.formIsVaild {
             goNextButton.isEnabled = true
-            goNextButton.backgroundColor = #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1)
+            goNextButton.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            goNextButton.setTitleColor(#colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1), for: .normal)
             } else {
             goNextButton.isEnabled = false
             goNextButton.backgroundColor = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
+            goNextButton.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
         }
     }
+    
 }
 
 extension ViewController: UITextViewDelegate {

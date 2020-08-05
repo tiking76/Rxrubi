@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,13 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEE-xq-j0R">
-                                <rect key="frame" x="184" y="612" width="46" height="46"/>
+                                <rect key="frame" x="186" y="612" width="50" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="S8e-Zs-C0J"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="S8e-Zs-C0J"/>
                                     <constraint firstAttribute="width" secondItem="xEE-xq-j0R" secondAttribute="height" multiplier="1:1" id="WOJ-k5-Fp3"/>
                                 </constraints>
                                 <state key="normal" title="Button">
-                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    <color key="titleColor" name="Color"/>
                                 </state>
                                 <connections>
                                     <action selector="goNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mmt-av-UVY"/>
@@ -49,7 +50,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o3R-h3-pLf" secondAttribute="trailing" constant="87" id="e1S-dL-Q5a"/>
                             <constraint firstItem="o3R-h3-pLf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gvs-BT-cve"/>
                             <constraint firstItem="o3R-h3-pLf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nPo-Yy-YTa"/>
-                            <constraint firstItem="xEE-xq-j0R" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wlT-9M-O9J"/>
+                            <constraint firstItem="xEE-xq-j0R" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="4" id="wlT-9M-O9J"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -131,4 +132,9 @@
             <point key="canvasLocation" x="2149.275362318841" y="132.58928571428572"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="Color">
+            <color red="0.68199998140335083" green="0.68199998140335083" blue="0.69800001382827759" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
