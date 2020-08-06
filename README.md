@@ -40,6 +40,8 @@ Clone the project.
 ```
 $ git clone this Project.
 $ cd Rxrubi
+$ pod install
+$ open rubi.xcworkspace
 ```
 
 ## Run make setup
