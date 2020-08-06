@@ -1,5 +1,5 @@
 # Rxrubi
-This app was created because I was the first person to show it to others.　　
+This app was created because I was the first person to show it to others.<br>
 By using this, you can teach the kanji furigana!<br>
 ![](https://gyazo.com/dfcedcc993fdc34a420d38b2f5c66771.png)
 # ScreenShot
