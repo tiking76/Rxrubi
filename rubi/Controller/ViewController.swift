@@ -11,9 +11,6 @@ import RxSwift
 import RxCocoa
 import JGProgressHUD
 
-protocol AuthenticationControllerProtocol {
-    func checkFormStatus()
-}
 
 class ViewController: UIViewController {
     
@@ -21,6 +18,7 @@ class ViewController: UIViewController {
     
     private var text : String?
     private let api = APIClient()
+    private let dispseBeg = DisposeBag()
 
     
     @IBOutlet weak var inputTextView: PlaceHolderTextView!
@@ -29,38 +27,48 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        inputTextView.delegate = self
         configureGradientLayer()
         configButton()
         configTextField()
         
+        inputTextView.rx.text.subscribe(onNext: { [weak self] text in
+            if let text = text, text.count <= 0 {
+                self?.goNextButton.isEnabled = false
+                self?.goNextButton.backgroundColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+                self?.goNextButton.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
+            } else {
+                self?.goNextButton.isEnabled = true
+                self?.goNextButton.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+                self?.goNextButton.setTitleColor(#colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1), for: .normal)
+            }
+            }).disposed(by: dispseBeg)
+        
+        goNextButton.rx.tap.subscribe(onNext: {  [unowned self] _ in
+            let storyboard: UIStoryboard = self.storyboard!
+            let nextView = storyboard.instantiateViewController(withIdentifier: "resultView") as? ResultViewController
+            nextView?.modalPresentationStyle = .fullScreen
+            self.showLoader(true)
+            self.text = self.inputTextView.text!
+            nextView?.context = self.text ?? ""
+            self.api.postText = self.text ?? ""
+            self.api.postData { (str) in
+                DispatchQueue.main.async {
+                    nextView?.resText = str
+                    self.showLoader(false)
+                    self.present(nextView!, animated: true)
+                    self.inputTextView.text = ""
+                }
+            }
+            }).disposed(by: dispseBeg)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    @IBAction func goNext(_ sender: Any) {
-        let storyboard: UIStoryboard = self.storyboard!
-        let nextView = storyboard.instantiateViewController(withIdentifier: "resultView") as? ResultViewController
-        nextView?.modalPresentationStyle = .fullScreen
-        showLoader(true)
-        text = inputTextView.text!
-        nextView?.context = text ?? ""
-        api.postText = text ?? ""
-        api.postData { (str) in
-            DispatchQueue.main.async {
-                nextView?.resText = str
-                self.showLoader(false)
-                self.present(nextView!, animated: true)
-                self.inputTextView.text = nil
-            }
-        }
-    }
-    
     func configButton() {
         view.addSubview(goNextButton)
-        goNextButton.backgroundColor = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
+        goNextButton.backgroundColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
         goNextButton.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
         goNextButton.setTitle("変換!", for: .normal)
         goNextButton.frame = CGRect(x: (self.view.frame.size.width / 2) - 150,
@@ -84,38 +92,5 @@ class ViewController: UIViewController {
     //UITextVieの範囲外をタップしたら閉じる
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
-    }
-    
-    @objc func handleisPush() {
-        textDidChange(sender: inputTextView)
-    }
-    
-    func textDidChange(sender: PlaceHolderTextView) {
-        if sender == inputTextView {
-            viewModel.text = sender.text
-        }
-        checkFormStatus()
-    }
-}
-
-extension ViewController : AuthenticationControllerProtocol {
-    
-    func checkFormStatus() {
-        if viewModel.formIsVaild {
-            goNextButton.isEnabled = true
-            goNextButton.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-            goNextButton.setTitleColor(#colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1), for: .normal)
-            } else {
-            goNextButton.isEnabled = false
-            goNextButton.backgroundColor = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
-            goNextButton.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
-        }
-    }
-    
-}
-
-extension ViewController: UITextViewDelegate {
-    func textViewDidEndEditing(_ textView: UITextView) {
-        handleisPush()
     }
 }
