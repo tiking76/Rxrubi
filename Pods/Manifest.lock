@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (5.0.4)
+  - Alamofire (5.2.2)
   - JGProgressHUD (2.1)
   - RxBlocking (5.1.1):
     - RxSwift (~> 5)
@@ -32,7 +32,7 @@ SPEC REPOS:
     - RxSwift
 
 SPEC CHECKSUMS:
-  Alamofire: 0fe5fd24b4298dc377a6550da7d5f1b30e286fcb
+  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   JGProgressHUD: aa403e9a5b45cae98903c4600cccdd98c0c3ec90
   RxBlocking: 5f700a78cad61ce253ebd37c9a39b5ccc76477b4
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601

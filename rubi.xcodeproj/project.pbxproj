@@ -9,6 +9,17 @@
 /* Begin PBXBuildFile section */
 		115AD6092475CEFE009C8F88 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115AD6082475CEFE009C8F88 /* ResultViewController.swift */; };
 		1174A19624C1B15400E951CD /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1174A19524C1B15400E951CD /* ViewModel.swift */; };
+		117D17F624EFC19100D9B77B /* rubiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117D17F524EFC19100D9B77B /* rubiTests.swift */; };
+		117D17FD24EFC4EB00D9B77B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EC15F42472071A0080247A /* ViewController.swift */; };
+		117D17FE24EFC4EF00D9B77B /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115AD6082475CEFE009C8F88 /* ResultViewController.swift */; };
+		117D17FF24EFC4F200D9B77B /* PlaceHolderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1192D43D24C6A3A80055DE48 /* PlaceHolderTextView.swift */; };
+		117D180024EFC4F600D9B77B /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1192D44624CEAF360055DE48 /* Context.swift */; };
+		117D180124EFC4F900D9B77B /* Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1192D44424CEA88F0055DE48 /* Extention.swift */; };
+		117D180224EFC4FF00D9B77B /* ReturnData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7740F04D73A0E2A8F1E477 /* ReturnData.swift */; };
+		117D180324EFC50400D9B77B /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB774628A0BB5BDCF8F80E15 /* APIClient.swift */; };
+		117D180424EFC50900D9B77B /* APIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119F411024AEFB8E00D73E5D /* APIModel.swift */; };
+		117D180524EFC51A00D9B77B /* APIClientType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB774C61DD29DF131607F584 /* APIClientType.swift */; };
+		117D180624EFC52100D9B77B /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1174A19524C1B15400E951CD /* ViewModel.swift */; };
 		1192D43E24C6A3A80055DE48 /* PlaceHolderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1192D43D24C6A3A80055DE48 /* PlaceHolderTextView.swift */; };
 		1192D44524CEA88F0055DE48 /* Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1192D44424CEA88F0055DE48 /* Extention.swift */; };
 		1192D44724CEAF360055DE48 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1192D44624CEAF360055DE48 /* Context.swift */; };
@@ -25,10 +36,23 @@
 		FB774E64A9373A2896AADDFE /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB774628A0BB5BDCF8F80E15 /* APIClient.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		117D17F824EFC19100D9B77B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 11EC15E52472071A0080247A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 11EC15EC2472071A0080247A;
+			remoteInfo = rubi;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		00BC655AA4748B0C06E50D66 /* Pods-rubi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rubi.debug.xcconfig"; path = "Target Support Files/Pods-rubi/Pods-rubi.debug.xcconfig"; sourceTree = "<group>"; };
 		115AD6082475CEFE009C8F88 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		1174A19524C1B15400E951CD /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		117D17F324EFC19100D9B77B /* rubiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rubiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		117D17F524EFC19100D9B77B /* rubiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rubiTests.swift; sourceTree = "<group>"; };
+		117D17F724EFC19100D9B77B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1192D43D24C6A3A80055DE48 /* PlaceHolderTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolderTextView.swift; sourceTree = "<group>"; };
 		1192D44424CEA88F0055DE48 /* Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extention.swift; sourceTree = "<group>"; };
 		1192D44624CEAF360055DE48 /* Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
@@ -49,6 +73,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		117D17F024EFC19100D9B77B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		11EC15EA2472071A0080247A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -60,6 +91,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		117D17F424EFC19100D9B77B /* rubiTests */ = {
+			isa = PBXGroup;
+			children = (
+				117D17F524EFC19100D9B77B /* rubiTests.swift */,
+				117D17F724EFC19100D9B77B /* Info.plist */,
+			);
+			path = rubiTests;
+			sourceTree = "<group>";
+		};
 		1192D43F24CEA7E30055DE48 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				11EC15EF2472071A0080247A /* rubi */,
+				117D17F424EFC19100D9B77B /* rubiTests */,
 				11EC15EE2472071A0080247A /* Products */,
 				6250863E5C0AC104C379C5BF /* Pods */,
 				DEDE42958CE30463BA738DBA /* Frameworks */,
@@ -116,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				11EC15ED2472071A0080247A /* rubi.app */,
+				117D17F324EFC19100D9B77B /* rubiTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -169,6 +211,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		117D17F224EFC19100D9B77B /* rubiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 117D17FC24EFC19100D9B77B /* Build configuration list for PBXNativeTarget "rubiTests" */;
+			buildPhases = (
+				117D17EF24EFC19100D9B77B /* Sources */,
+				117D17F024EFC19100D9B77B /* Frameworks */,
+				117D17F124EFC19100D9B77B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				117D17F924EFC19100D9B77B /* PBXTargetDependency */,
+			);
+			name = rubiTests;
+			productName = rubiTests;
+			productReference = 117D17F324EFC19100D9B77B /* rubiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		11EC15EC2472071A0080247A /* rubi */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 11EC16012472071C0080247A /* Build configuration list for PBXNativeTarget "rubi" */;
@@ -194,10 +254,14 @@
 		11EC15E52472071A0080247A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1130;
+				LastSwiftUpdateCheck = 1160;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "yoshiki Tachi";
 				TargetAttributes = {
+					117D17F224EFC19100D9B77B = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 11EC15EC2472071A0080247A;
+					};
 					11EC15EC2472071A0080247A = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -217,11 +281,19 @@
 			projectRoot = "";
 			targets = (
 				11EC15EC2472071A0080247A /* rubi */,
+				117D17F224EFC19100D9B77B /* rubiTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		117D17F124EFC19100D9B77B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		11EC15EB2472071A0080247A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -277,6 +349,24 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		117D17EF24EFC19100D9B77B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				117D17FD24EFC4EB00D9B77B /* ViewController.swift in Sources */,
+				117D180424EFC50900D9B77B /* APIModel.swift in Sources */,
+				117D180224EFC4FF00D9B77B /* ReturnData.swift in Sources */,
+				117D180624EFC52100D9B77B /* ViewModel.swift in Sources */,
+				117D180524EFC51A00D9B77B /* APIClientType.swift in Sources */,
+				117D17F624EFC19100D9B77B /* rubiTests.swift in Sources */,
+				117D180324EFC50400D9B77B /* APIClient.swift in Sources */,
+				117D17FE24EFC4EF00D9B77B /* ResultViewController.swift in Sources */,
+				117D180024EFC4F600D9B77B /* Context.swift in Sources */,
+				117D180124EFC4F900D9B77B /* Extention.swift in Sources */,
+				117D17FF24EFC4F200D9B77B /* PlaceHolderTextView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		11EC15E92472071A0080247A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -298,6 +388,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		117D17F924EFC19100D9B77B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 11EC15EC2472071A0080247A /* rubi */;
+			targetProxy = 117D17F824EFC19100D9B77B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		11EC15F62472071A0080247A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -318,6 +416,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		117D17FA24EFC19100D9B77B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9DZWZ2QDGB;
+				INFOPLIST_FILE = rubiTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tiking.rubiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rubi.app/rubi";
+			};
+			name = Debug;
+		};
+		117D17FB24EFC19100D9B77B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9DZWZ2QDGB;
+				INFOPLIST_FILE = rubiTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tiking.rubiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rubi.app/rubi";
+			};
+			name = Release;
+		};
 		11EC15FF2472071C0080247A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -473,6 +613,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		117D17FC24EFC19100D9B77B /* Build configuration list for PBXNativeTarget "rubiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				117D17FA24EFC19100D9B77B /* Debug */,
+				117D17FB24EFC19100D9B77B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		11EC15E82472071A0080247A /* Build configuration list for PBXProject "rubi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

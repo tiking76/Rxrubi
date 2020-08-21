@@ -25,9 +25,6 @@
                                 <state key="normal" title="Button">
                                     <color key="titleColor" name="Color"/>
                                 </state>
-                                <connections>
-                                    <action selector="goNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mmt-av-UVY"/>
-                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="o3R-h3-pLf" customClass="PlaceHolderTextView" customModule="rubi" customModuleProvider="target">
                                 <rect key="frame" x="87" y="328" width="240" height="240"/>
