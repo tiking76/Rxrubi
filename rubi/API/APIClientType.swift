@@ -14,7 +14,5 @@ enum RequestType {
             return ""
         }
     }
-
-
 }
 

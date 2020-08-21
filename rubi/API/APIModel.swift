@@ -9,7 +9,6 @@
 import Foundation
 
 protocol APIModel {
-
     var appID : String { get }
     var postText : String { get set }
     func postData(complicationHandler: @escaping (String) -> Void)
