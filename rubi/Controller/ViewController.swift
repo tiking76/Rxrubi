@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     private let dispseBeg = DisposeBag()
 
     
-    @IBOutlet weak var inputTextView: PlaceHolderTextView!
+    @IBOutlet weak var inputTextView: UITextView!
     
     @IBOutlet weak var goNextButton: UIButton!
     
@@ -85,7 +85,7 @@ class ViewController: UIViewController {
     func configTextField() {
         view.addSubview(inputTextView)
         inputTextView.backgroundColor = UIColor(named: "BackgroundColor")
-        inputTextView.placeHolder = "ここに変換したい漢字をいれてね"
+        //inputTextView.placeHolder = "ここに変換したい漢字をいれてね"
         
     }
     

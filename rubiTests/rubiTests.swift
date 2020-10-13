@@ -9,14 +9,6 @@
 import XCTest
 
 class rubiTests: XCTestCase {
-    
-    var viewController : ViewController!
-    
-    override class func setUp() {
-        super.setUp()
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        self.viewController = storyboard.instantiateInitialViewController() as? UIViewController
-    }
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

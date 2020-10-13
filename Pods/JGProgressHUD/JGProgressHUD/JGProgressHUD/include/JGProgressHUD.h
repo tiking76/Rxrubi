@@ -6,17 +6,17 @@
 //  Copyright (c) 2014 Jonas Gessner. All rights reserved.
 //
 
-#import "JGProgressHUD-Defines.h"
-#import "JGProgressHUDShadow.h"
-#import "JGProgressHUDAnimation.h"
-#import "JGProgressHUDFadeAnimation.h"
-#import "JGProgressHUDFadeZoomAnimation.h"
-#import "JGProgressHUDIndicatorView.h"
-#import "JGProgressHUDErrorIndicatorView.h"
-#import "JGProgressHUDSuccessIndicatorView.h"
-#import "JGProgressHUDRingIndicatorView.h"
-#import "JGProgressHUDPieIndicatorView.h"
-#import "JGProgressHUDIndeterminateIndicatorView.h"
+#import <JGProgressHUD-Defines.h>
+#import <JGProgressHUDShadow.h>
+#import <JGProgressHUDAnimation.h>
+#import <JGProgressHUDFadeAnimation.h>
+#import <JGProgressHUDFadeZoomAnimation.h>
+#import <JGProgressHUDIndicatorView.h>
+#import <JGProgressHUDErrorIndicatorView.h>
+#import <JGProgressHUDSuccessIndicatorView.h>
+#import <JGProgressHUDRingIndicatorView.h>
+#import <JGProgressHUDPieIndicatorView.h>
+#import <JGProgressHUDIndeterminateIndicatorView.h>
 
 @protocol JGProgressHUDDelegate;
 

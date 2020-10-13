@@ -10,5 +10,6 @@ target 'rubi' do
   pod 'RxCocoa'
   pod 'RxBlocking'
   pod 'RxKeyboard'
+  pod 'RxTest'
   # Pods for rubi
 end

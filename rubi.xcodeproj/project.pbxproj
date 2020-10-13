@@ -10,7 +10,6 @@
 		115AD6092475CEFE009C8F88 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115AD6082475CEFE009C8F88 /* ResultViewController.swift */; };
 		1174A19624C1B15400E951CD /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1174A19524C1B15400E951CD /* ViewModel.swift */; };
 		117D17F624EFC19100D9B77B /* rubiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117D17F524EFC19100D9B77B /* rubiTests.swift */; };
-		117D17FD24EFC4EB00D9B77B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EC15F42472071A0080247A /* ViewController.swift */; };
 		117D17FE24EFC4EF00D9B77B /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115AD6082475CEFE009C8F88 /* ResultViewController.swift */; };
 		117D17FF24EFC4F200D9B77B /* PlaceHolderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1192D43D24C6A3A80055DE48 /* PlaceHolderTextView.swift */; };
 		117D180024EFC4F600D9B77B /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1192D44624CEAF360055DE48 /* Context.swift */; };
@@ -255,7 +254,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1160;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "yoshiki Tachi";
 				TargetAttributes = {
 					117D17F224EFC19100D9B77B = {
@@ -353,7 +352,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				117D17FD24EFC4EB00D9B77B /* ViewController.swift in Sources */,
 				117D180424EFC50900D9B77B /* APIModel.swift in Sources */,
 				117D180224EFC4FF00D9B77B /* ReturnData.swift in Sources */,
 				117D180624EFC52100D9B77B /* ViewModel.swift in Sources */,
@@ -484,6 +482,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -544,6 +543,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -587,7 +587,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yoshikiapp.rubi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -606,7 +606,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yoshikiapp.rubi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
